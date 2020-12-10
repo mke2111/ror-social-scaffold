@@ -1,26 +1,26 @@
 # Scaffold for social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> Project to do a social media app: You can sign up with email and password and then create posts, add other user as friends, read the post of your friends, comment and give them a like.
 
 ## Built With
 
 - Ruby v2.7.0
-- Ruby on Rails v5.2.4
+- Ruby on Rails v6
+
+## Tested With
+
+- Rubocop
+- Rspec
+
+## Prerequisites
+
+- Ruby
+- Rails
+- Postgres
 
 ## Live Demo
 
-TBA
-
-
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+Working on it
 
 ### Setup
 
@@ -71,7 +71,21 @@ TBA
 
 ## Authors
 
-TBA
+### Author 1
+
+👤 **Roy Mukuye**
+
+- GitHub: [@mke2111](https://github.com/mke2111)
+- Twitter: [@Roymkenya](https://twitter.com/Roymkenya)
+- LinkedIn: [Roy Mukuye](https://www.linkedin.com/in/roy-mukuye-42b07b1b4)
+
+### Author 2
+
+👤 **Eduardo Baeza**
+
+- GitHub: [@edxco](https://github.com/edxco/)
+- Twitter: [@lalo_nbc](https://twitter.com/lalo_nbc/)
+- LinkedIn: [eduardo-n-baeza](https://www.linkedin.com/in/eduardo-n-baeza/)
 
 ## 🤝 Contributing
 
