@@ -13,4 +13,16 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:email) }
     it { should validate_presence_of(:password) }
   end
+
+  describe 'Creating user' do
+    subject { User.create(name: 'lalo', email: 'lalo@microverse.org', password: '123456789') }
+
+    it 'it dont return other name than lalo' do
+      expect(subject.name).to_not eq('Roy')
+    end
+
+    it 'email have email format' do
+      expect(subject.email).to match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/)
+    end
+  end
 end
