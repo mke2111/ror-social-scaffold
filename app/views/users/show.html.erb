@@ -1,10 +1,13 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
 
-
-
-  <h3><%= link_to 'Add as friend', user_friendship_path(current_user, :friendship => {:friend_id => @user.id}), method: :post%></h3>
-
+  <% if current_user.friends.none?(@user) && current_user.pending_friends.none?(@user) && current_user != @user %>
+    <%= link_to 'Add as friend', user_friendships_path(current_user, :friendship => {:friend_id => @user.id}), method: :post, class: 'btn-1 green_btn' %>
+    <% elsif current_user.friends.none?(@user) && current_user.pending_friends.include?(@user) %>
+  <p>'Waiting for confirmation.'</p>
+  <% elsif current_user != @user %>
+    <p>'You are already friends.'</p>
+  <% end %>
 
   <article class="timeline">
     <h3>Recent posts:</h3>

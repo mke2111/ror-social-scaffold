@@ -5,7 +5,7 @@ class FriendshipsController < ApplicationController
   end
 
   def index
-    @friendship = current_user.friendships.build(friendship.params)
+    @friendship = current_user.friendships.build(friendship_params)
   end
 
   def create

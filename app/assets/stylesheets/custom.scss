@@ -155,12 +155,14 @@ form {
       padding: 8px;
       background-color: $primary-color-light;
     }
-/* stylelint-disable */
+
+    /* stylelint-disable */
     input[type="checkbox"] {
       width: fit-content;
     }
   }
-/* stylelint-enable */
+
+  /* stylelint-enable */
 
   .actions {
     display: flex;
@@ -347,4 +349,198 @@ form {
   .user-section {
     width: 50%;
   }
+}
+
+.btn-1 {
+  font-family: Hack, monospace;
+
+  color: #ffffff;
+  cursor: pointer;
+  font-size: .8em;
+  padding: .3rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: auto;
+  position: relative;
+
+  &:hover {
+
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px #bdbdbd;
+    padding: .5rem .8rem .5rem .8rem;
+
+    &::after {
+      opacity: 1;
+      transition: all 0.5s;
+
+    }
+  }
+}
+
+.green_btn {
+  background: #689f38;
+
+  &:hover {
+    background: #239414;
+  }
+}
+
+.orange_btn {
+  background: #D3A13B;
+
+  &:hover {
+    background: #c09e07;
+  }
+}
+
+
+.login-btn {
+  font-family: Hack, monospace;
+  background: #bbff00;
+  color: #1d1d1d;
+  cursor: pointer;
+  font-size: 2em;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: auto;
+  position: relative;
+  min-width: 250px;
+
+  &::after {
+    content: "\f2f6";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    position: absolute;
+    left: 80%;
+    top: 54%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+
+  }
+
+  &:hover {
+    background: #2b2bff;
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px #0000ff61;
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    color: #ffffff;
+
+    &::after {
+      opacity: 1;
+      transition: all 0.5s;
+      color: #ffffff;
+
+    }
+  }
+
+
+}
+
+
+.logout-btn {
+  font-family: Hack, monospace;
+  background: #d3d3d3;
+  color: #2c2c2c;
+  cursor: pointer;
+  font-size: 2em;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: auto;
+  position: relative;
+  min-width: 250px;
+
+  &::after {
+    content: "\f2f5";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    position: absolute;
+    left: 80%;
+    top: 54%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+
+  }
+
+  &:hover {
+    background: #2b2bff;
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px #0000ff61;
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    color: #ffffff;
+
+    &::after {
+      opacity: 1;
+      transition: all 0.5s;
+      color: #ffffff;
+
+    }
+  }
+
+
+}
+
+
+/* Table CSS */
+
+.Rtable {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 3em 0;
+  padding: 0;
+}
+
+.Rtable-cell {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  border-bottom: solid 1px rgba(112, 128, 144, 0.2);
+  text-align: center;
+}
+
+.Rtable-cell>h1,
+.Rtable-cell>h2,
+.Rtable-cell>h3,
+.Rtable-cell>h4,
+.Rtable-cell>h5,
+.Rtable-cell>h6 {
+  margin: 0;
+}
+
+/* Table column sizing
+================================== */
+.Rtable--2cols>.Rtable-cell {
+  width: 50%;
+}
+
+.Rtable--3cols>.Rtable-cell {
+  width: 33.33%;
+}
+
+.Rtable--4cols>.Rtable-cell {
+  width: 25%;
+}
+
+.Rtable--5cols>.Rtable-cell {
+  width: 20%;
+}
+
+.Rtable--6cols>.Rtable-cell {
+  width: 16.6%;
 }
