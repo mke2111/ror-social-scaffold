@@ -4,7 +4,7 @@ RSpec.describe Post, type: :model do
   describe 'associations' do
     it { should belong_to(:user).class_name('User') }
     it { should have_many(:comments).class_name('Comment') }
-    it { should have_many(:likes)}
+    it { should have_many(:likes) }
   end
 
   describe 'validations' do
