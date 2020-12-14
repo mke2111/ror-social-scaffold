@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
   describe 'associations' do
     it { should have_many(:posts).class_name('Post') }
     it { should have_many(:comments).class_name('Comment') }
-    it { should have_many(:likes).class_name('like') }
+    it { should have_many(:likes)}
     it { should have_many(:friendships).class_name('Friendship') }
   end
 
