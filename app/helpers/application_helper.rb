@@ -15,4 +15,9 @@ module ApplicationHelper
       link_to('Like!', post_likes_path(post_id: post.id), method: :post)
     end
   end
+
+  def notify
+    notice if notice.present?
+    alert if alert.present?
+  end
 end
