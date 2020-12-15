@@ -8,8 +8,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @friend_requests = current_user.friend_requests
     @user = User.find(params[:id])
     @posts = @user.posts.ordered_by_most_recent
+    @friend_requests = current_user.friend_requests
   end
 end
