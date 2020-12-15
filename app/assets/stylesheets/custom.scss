@@ -359,15 +359,13 @@ form {
   padding: 0.3rem;
   border: 0;
   transition: all 0.5s;
-  border-radius: 10px;
+  border-radius: 5px;
   width: auto;
   position: relative;
 
   &:hover {
     transition: all 0.5s;
-    border-radius: 10px;
     box-shadow: 0 6px 15px #bdbdbd;
-    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
 
     &::after {
       opacity: 1;
@@ -389,6 +387,14 @@ form {
 
   &:hover {
     background: #c09e07;
+  }
+}
+
+.red_btn {
+  background: #ff0000;
+
+  &:hover {
+    background: #c41111;
   }
 }
 
@@ -529,3 +535,11 @@ form {
   background-color: #e7e7e7;
   color: black;
 } /* Gray */
+
+.mx-10 {
+  margin: 0 10px;
+}
+
+.my-10 {
+  margin: 10px 0;
+}
