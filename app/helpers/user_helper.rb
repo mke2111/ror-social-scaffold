@@ -21,24 +21,24 @@ module UserHelper
   def action_request(friend_request)
     concat content_tag(:p, "You haven't received any friend request yet.") unless current_user.friend_requests.any?
     friend_request.each do |user|
-      if !current_user.friend?(user)
-        concat user.name
-        concat link_to 'Accept', user_friendship_path(@friend_requests, user), method: :put,
-                                                                               class: 'btn-1 green_btn mx-10'
-        concat link_to 'Reject', user_friendship_path(@friend_requests, user), method: :delete,
-                                                                               class: 'btn-1 red_btn mx-10'
-      end
+      next if current_user.friend?(user)
+
+      concat user.name
+      concat link_to 'Accept', user_friendship_path(@friend_requests, user), method: :put,
+                                                                             class: 'btn-1 green_btn mx-10'
+      concat link_to 'Reject', user_friendship_path(@friend_requests, user), method: :delete,
+                                                                             class: 'btn-1 red_btn mx-10'
     end
   end
 
   def action_pending(pending_request)
     concat 'No pending confirmations' unless current_user.friend?(pending_request)
     pending_request.each do |user|
-      if !current_user.friend?(user)
-        concat content_tag(:li)
-        concat 'Waiting friend confirmation from '
-        concat content_tag(:strong, user.name)
-      end
+      next if current_user.friend?(user)
+
+      concat content_tag(:li)
+      concat 'Waiting friend confirmation from '
+      concat content_tag(:strong, user.name)
     end
   end
 end
