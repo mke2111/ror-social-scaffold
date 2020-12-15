@@ -353,11 +353,10 @@ form {
 
 .btn-1 {
   font-family: Hack, monospace;
-
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
-  font-size: .8em;
-  padding: .3rem;
+  font-size: 0.8em;
+  padding: 0.3rem;
   border: 0;
   transition: all 0.5s;
   border-radius: 10px;
@@ -365,16 +364,14 @@ form {
   position: relative;
 
   &:hover {
-
     transition: all 0.5s;
     border-radius: 10px;
-    box-shadow: 0px 6px 15px #bdbdbd;
-    padding: .5rem .8rem .5rem .8rem;
+    box-shadow: 0 6px 15px #bdbdbd;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
 
     &::after {
       opacity: 1;
       transition: all 0.5s;
-
     }
   }
 }
@@ -388,17 +385,16 @@ form {
 }
 
 .orange_btn {
-  background: #D3A13B;
+  background: #d3a13b;
 
   &:hover {
     background: #c09e07;
   }
 }
 
-
 .login-btn {
   font-family: Hack, monospace;
-  background: #bbff00;
+  background: #bf0;
   color: #1d1d1d;
   cursor: pointer;
   font-size: 2em;
@@ -410,39 +406,21 @@ form {
   position: relative;
   min-width: 250px;
 
-  &::after {
-    content: "\f2f6";
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 400;
-    position: absolute;
-    left: 80%;
-    top: 54%;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-
-  }
-
   &:hover {
     background: #2b2bff;
     transition: all 0.5s;
     border-radius: 10px;
-    box-shadow: 0px 6px 15px #0000ff61;
+    box-shadow: 0 6px 15px #0000ff61;
     padding: 1.5rem 3rem 1.5rem 1.5rem;
-    color: #ffffff;
+    color: #fff;
 
     &::after {
       opacity: 1;
       transition: all 0.5s;
-      color: #ffffff;
-
+      color: #fff;
     }
   }
-
-
 }
-
 
 .logout-btn {
   font-family: Hack, monospace;
@@ -458,42 +436,23 @@ form {
   position: relative;
   min-width: 250px;
 
-  &::after {
-    content: "\f2f5";
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 400;
-    position: absolute;
-    left: 80%;
-    top: 54%;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-
-  }
-
   &:hover {
     background: #2b2bff;
     transition: all 0.5s;
     border-radius: 10px;
-    box-shadow: 0px 6px 15px #0000ff61;
+    box-shadow: 0 6px 15px #0000ff61;
     padding: 1.5rem 3rem 1.5rem 1.5rem;
-    color: #ffffff;
+    color: #fff;
 
     &::after {
       opacity: 1;
       transition: all 0.5s;
-      color: #ffffff;
-
+      color: #fff;
     }
   }
-
-
 }
 
-
 /* Table CSS */
-
 .Rtable {
   display: -webkit-box;
   display: flex;
@@ -514,33 +473,33 @@ form {
   text-align: center;
 }
 
-.Rtable-cell>h1,
-.Rtable-cell>h2,
-.Rtable-cell>h3,
-.Rtable-cell>h4,
-.Rtable-cell>h5,
-.Rtable-cell>h6 {
+/* stylelint-disable no-descending-specificity */
+.Rtable-cell > h1,
+.Rtable-cell > h2,
+.Rtable-cell > h3,
+.Rtable-cell > h4,
+.Rtable-cell > h5,
+.Rtable-cell > h6 {
   margin: 0;
 }
 
-/* Table column sizing
-================================== */
-.Rtable--2cols>.Rtable-cell {
+/* Table column sizing */
+.Rtable--2cols > .Rtable-cell {
   width: 50%;
 }
 
-.Rtable--3cols>.Rtable-cell {
+.Rtable--3cols > .Rtable-cell {
   width: 33.33%;
 }
 
-.Rtable--4cols>.Rtable-cell {
+.Rtable--4cols > .Rtable-cell {
   width: 25%;
 }
 
-.Rtable--5cols>.Rtable-cell {
+.Rtable--5cols > .Rtable-cell {
   width: 20%;
 }
 
-.Rtable--6cols>.Rtable-cell {
+.Rtable--6cols > .Rtable-cell {
   width: 16.6%;
 }
