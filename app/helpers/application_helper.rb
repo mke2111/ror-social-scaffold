@@ -15,4 +15,19 @@ module ApplicationHelper
       link_to('Like!', post_likes_path(post_id: post.id), method: :post)
     end
   end
+
+  def notify
+    notice if notice.present?
+    alert if alert.present?
+  end
+
+  def sign_navbar
+    if current_user
+      concat 'Hello,'
+      concat link_to content_tag(:strong, current_user.name.upcase), user_path(current_user), class: ''
+      concat link_to 'Sign out', destroy_user_session_path, method: :delete
+    else
+      concat link_to 'Sign in', user_session_path
+    end
+  end
 end
