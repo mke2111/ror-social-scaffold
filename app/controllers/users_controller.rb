@@ -11,5 +11,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts.ordered_by_most_recent
     @friend_requests = current_user.friend_requests
+    @mutual_friends = current_user.mutual_friends(@user)
   end
 end

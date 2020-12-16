@@ -38,4 +38,8 @@ class User < ApplicationRecord
     friends_array += inverse_friendships.map { |friendship| friendship.user if friendship.confirmed }
     friends_array.compact
   end
+
+  def mutual_friends(user)
+    friends & user.friends
+  end
 end
