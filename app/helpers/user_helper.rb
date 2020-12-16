@@ -53,6 +53,6 @@ module UserHelper
   end
 
   def mutuals
-    @mutual_friends.map { |mutual| mutual[:name] }
+    @mutual_friends.map(&:name).join(', ')
   end
 end

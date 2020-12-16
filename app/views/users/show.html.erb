@@ -1,25 +1,27 @@
 <section class="user-section">
-  <h2><%= "Name: #{@user.name}" %></h2>
+  <div class="friend-side">
+    <h2><%= "Name: #{@user.name}" %></h2>
 
-  <% friendship?(@user)%>
+    <% friendship?(@user)%>
 
-  <article class="timeline">
-    <h3>Recent posts:</h3>
-    <ul class="posts">
-      <%= render @posts %>
-    </ul>
-  </article>
+    <article class="timeline">
+      <h3>Recent posts:</h3>
+      <ul class="posts">
+        <%= render @posts %>
+      </ul>
+    </article>
+  </div>
+
+  <div class="mutuals">
+    <h3>Mutual friends: <%= @mutual_friends.count %></h3>
+    <div class="mutual-friend-name">
+      <%= mutuals %>
+    </div>
+  </div>
 </section>
 
 <section class="friend-requests-section">
   <ul class="users-list">
     <%= render 'received_request' %>
-  </ul>
-</section>
-
-<section class="">
-  <h3>Mutual friends: <%= @mutual_friends.count %></h3>
-  <ul class="">
-    <%= mutuals %>
   </ul>
 </section>

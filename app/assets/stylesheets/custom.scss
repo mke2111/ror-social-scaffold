@@ -298,9 +298,24 @@ form {
 .user-section {
   width: 100%;
   margin-left: 16px;
+  display: flex;
+  justify-content: space-between;
 
   h2 {
     text-transform: capitalize;
+  }
+
+  .friend-side {
+    width: 70%;
+  }
+
+  .mutuals {
+    width: 30%;
+
+    .mutual-friend-name {
+      color: #239414;
+      font-weight: 600;
+    }
   }
 
   .timeline {
