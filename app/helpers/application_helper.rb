@@ -23,7 +23,7 @@ module ApplicationHelper
 
   def sign_navbar
     if current_user
-      concat 'Hello,' 
+      concat 'Hello,'
       concat link_to content_tag(:strong, current_user.name.upcase), user_path(current_user), class: ''
       concat link_to 'Sign out', destroy_user_session_path, method: :delete
     else
