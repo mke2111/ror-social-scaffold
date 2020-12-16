@@ -41,4 +41,11 @@ module UserHelper
       concat content_tag(:strong, user.name)
     end
   end
+
+  def user_table(user)
+    if user != current_user
+      concat content_tag(:p, "Name #{user.name}", class: "mt-20") + content_tag(:p, (link_to "See Profile", user_path(user), class: "btn-1 orange_btn"), class: "mb-10" ) 
+      content_tag(:p, friendship?(user))
+    end
+  end
 end

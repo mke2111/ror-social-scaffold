@@ -513,10 +513,11 @@ form {
 /* Label */
 .label {
   color: white;
-  padding: 3px;
+  padding: 5px 4px 4px 8px;
   border-radius: 10px;
   font-weight: bold;
   font-size: 0.9em;
+  width: 50%;
 }
 
 .success {
@@ -542,4 +543,21 @@ form {
 
 .my-10 {
   margin: 10px 0;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-20 {
+  margin: 20px 0 10px 0;
+  font-weight: bold;
+  background-color: rgb(30, 155, 61);
+  padding: 8px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.table_users {
+  width: 50%;
 }

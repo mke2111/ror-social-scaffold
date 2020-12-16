@@ -1,12 +1,1 @@
-<div class="Rtable Rtable--4cols">
-  <% if user != current_user%>
-  <div class="Rtable-cell"><h2>Name: <%= user.name %></h2></div>
-  <div class="Rtable-cell">
-    <%= link_to 'See Profile', user_path(user), class: 'btn-1 orange_btn' %>
-  </div>
-  <div class="Rtable-cell">
-  <% friendship?(user) %>
-  </div>
-  <div class="Rtable-cell">&nbsp;</div>
-  <% end %>
-</div>
+<% user_table(user) %>
