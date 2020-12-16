@@ -51,4 +51,8 @@ module UserHelper
                        class: 'mb-10')
     content_tag(:p, friendship?(user))
   end
+
+  def mutuals
+    @mutual_friends.each { |mutual| mutual.name }
+  end
 end
