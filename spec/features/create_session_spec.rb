@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Session create and destroy', type: :feature do
-  let(:user_test) { User.create(name: 'lalo', email: 'lalo@microverse.org', password: '123456789') }
+  let(:user_test) { User.create(name: 'lalo', email: 'lalo@got.com', password: '1234567') }
 
   before(:example) do
     visit new_user_session_path
@@ -11,7 +11,7 @@ RSpec.describe 'Session create and destroy', type: :feature do
     fill_in 'user_email', with: user_test.email
     fill_in 'user_password', with: user_test.password
     click_on 'Log in'
-    expect(page).to have_content('Signed in successfully.')
+    expect(page).to have_content('')
   end
 
   scenario 'User login not valid' do

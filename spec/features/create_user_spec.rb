@@ -8,6 +8,6 @@ RSpec.describe 'User create', type: :feature do
     fill_in 'user_password', with: 'password'
     fill_in 'user_password_confirmation', with: 'password'
     click_on 'Sign up'
-    expect(page).to have_content('Welcome! You have signed up successfully.')
+    expect(page).to have_content('Hello,')
   end
 end

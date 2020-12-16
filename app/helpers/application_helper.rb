@@ -22,10 +22,12 @@ module ApplicationHelper
   end
 
   def sign_navbar
-    concat link_to 'Sign in', user_session_path unless current_user
-
-    concat 'Hello,'
-    concat link_to content_tag(:strong, current_user.name.upcase), user_path(current_user), class: ''
-    concat link_to 'Sign out', destroy_user_session_path, method: :delete
+    if current_user
+      concat 'Hello,' 
+      concat link_to content_tag(:strong, current_user.name.upcase), user_path(current_user), class: ''
+      concat link_to 'Sign out', destroy_user_session_path, method: :delete
+    else
+      concat link_to 'Sign in', user_session_path
+    end
   end
 end
