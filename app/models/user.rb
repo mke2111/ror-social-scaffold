@@ -11,33 +11,49 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   has_many :friendships
-  has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
+  # has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
+
+  has_many :confirmed_friendships, -> { where confirmed: true }, class_name: 'Friendship'
+  has_many :friends, through: :confirmed_friendships
+
+  # Users who needs to confirm friendship
+  has_many :pending_friendships, -> { where confirmed: false }, class_name: 'Friendship', foreign_key: 'user_id'
+  has_many :pending_friends, through: :pending_friendships, source: :friend
+
+  # Users who requested to be friends (needed for notifications)
+  has_many :inverse_friendships, -> { where confirmed: false }, class_name: 'Friendship', foreign_key: 'friend_id'
+  has_many :friend_requests, through: :inverse_friendships, source: :user
+
+  def friends_and_own_posts
+    Post.where(user: (friends << self))
+    # This will produce SQL query with IN. Something like: select * from posts where user_id IN (1,45,874,43);
+  end
 
   # Users who have yet to confirme friend requests
-  def pending_friends
-    friendships.map { |friendship| friendship.friend unless friendship.confirmed }.compact
-  end
+  # def pending_friends
+  #   friendships.map { |friendship| friendship.friend unless friendship.confirmed }.compact
+  # end
 
   # Users who have requested to be friends
-  def friend_requests
-    inverse_friendships.map { |friendship| friendship.user unless friendship.confirmed }.compact
-  end
+  # def friend_requests
+  #   inverse_friendships.map { |friendship| friendship.user unless friendship.confirmed }.compact
+  # end
 
-  def confirm_friend(user)
-    friendship = inverse_friendships.find { |friendshipp| friendshipp.user == user }
-    friendship.confirmed = true
-    friendship.save
-  end
+  # def confirm_friend(user)
+  #   friendship = inverse_friendships.find { |friendshipp| friendshipp.user == user }
+  #   friendship.confirmed = true
+  #   friendship.save
+  # end
 
   def friend?(user)
     friends.include?(user)
   end
 
-  def friends
-    friends_array = friendships.map { |friendship| friendship.friend if friendship.confirmed }
-    friends_array += inverse_friendships.map { |friendship| friendship.user if friendship.confirmed }
-    friends_array.compact
-  end
+  # def friends
+  #   friends_array = friendships.map { |friendship| friendship.friend if friendship.confirmed }
+  #   friends_array += inverse_friendships.map { |friendship| friendship.user if friendship.confirmed }
+  #   friends_array.compact
+  # end
 
   def mutual_friends(user)
     friends & user.friends
