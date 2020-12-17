@@ -53,6 +53,8 @@ module UserHelper
   end
 
   def mutuals
+    return if @mutual_friends.nil?
+
     @mutual_friends.map(&:name).join(', ')
   end
 end

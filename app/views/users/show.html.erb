@@ -13,7 +13,11 @@
   </div>
 
   <div class="mutuals">
-    <h3>Mutual friends: <%= @mutual_friends.count %></h3>
+  <h3>Mutual friends: 
+  <% unless @mutual_friends.nil? %>
+  <%= @mutual_friends.count %>
+  <% end %>
+  </h3>
     <div class="mutual-friend-name">
       <%= mutuals %>
     </div>
