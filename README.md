@@ -1,26 +1,31 @@
 # Scaffold for social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> Project to do a social media app: You can sign up with email and password and then create posts, add other user as friends, read the post of your friends, comment and give them a like.
+
+![image](./Screenshot1.png)
+
+![image](./Screenshot2.png)
 
 ## Built With
 
 - Ruby v2.7.0
-- Ruby on Rails v5.2.4
+- Ruby on Rails v6
+
+## Tested and Analyzed With
+
+- Rubocop
+- Rspec
+- Stylintrc
+
+## Prerequisites
+
+- Ruby
+- Rails
+- Postgres
 
 ## Live Demo
 
-TBA
-
-
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+[Stay in touch](https://mighty-dawn-48886.herokuapp.com/users/sign_in)
 
 ### Setup
 
@@ -67,11 +72,42 @@ Open `http://localhost:3000/` in your browser.
 
 ### Deployment
 
-TBA
+-- In order to deploy this app to Heroku follow the steps below.
+
+- Install the Heroku CLI.
+
+- After that type the command to create the app and add the heroku repository to your project.
+
+- `heroku create`
+
+- Then `git push -u heroku yourbranch:master` to deploy the app.
+
+- Replace yourbranch with the name of your branch.
+
+- Finally run the command to create your database and tables on Heroku's server.
+
+- `heroku run rails db:migrate`
+
+- Enjoy the App functionalities.
+
 
 ## Authors
 
-TBA
+### Author 1
+
+👤 **Roy Mukuye**
+
+- GitHub: [@mke2111](https://github.com/mke2111)
+- Twitter: [@Roymkenya](https://twitter.com/Roymkenya)
+- LinkedIn: [Roy Mukuye](https://www.linkedin.com/in/roy-mukuye-42b07b1b4)
+
+### Author 2
+
+👤 **Eduardo Baeza**
+
+- GitHub: [@edxco](https://github.com/edxco/)
+- Twitter: [@lalo_nbc](https://twitter.com/lalo_nbc/)
+- LinkedIn: [eduardo-n-baeza](https://www.linkedin.com/in/eduardo-n-baeza/)
 
 ## 🤝 Contributing
 
@@ -83,11 +119,4 @@ Feel free to check the [issues page](issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-TBA
-
-## 📝 License
-
-TBA
 

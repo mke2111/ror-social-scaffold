@@ -1,5 +1,18 @@
 <section class="users-section">
-  <ul class="users-list">
+  <div class="table_users">
     <%= render @users %>
+  </div>
+</section>
+
+<hr>
+<section class="friend-requests-section">
+  <ul class="users-list">
+    <h2 class="my-10">Received Requests</h2>
+      <% action_request(@friend_requests) %>
+  </ul>
+  
+  <ul class="users-list">
+    <h2 class="my-10">Sent Requests</h2>
+    <% action_pending(@pending_requests)%>
   </ul>
 </section>
