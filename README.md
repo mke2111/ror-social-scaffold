@@ -24,7 +24,7 @@
 
 ## Live Demo
 
-[Stay in touch](https://mighty-dawn-48886.herokuapp.com/users)
+[Stay in touch](https://mighty-dawn-48886.herokuapp.com/users/sign_in)
 
 ### Setup
 
