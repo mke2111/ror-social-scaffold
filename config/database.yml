@@ -58,8 +58,6 @@ development:
 test:
   <<: *default
   database: ror_social_scaffold_development
-  username: edxco
-  password: <%= ENV['ROR_SOCIAL_SCAFFOLD_DATABASE_PASSWORD'] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
