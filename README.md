@@ -2,15 +2,20 @@
 
 > Project to do a social media app: You can sign up with email and password and then create posts, add other user as friends, read the post of your friends, comment and give them a like.
 
+![image](./Screenshot1.png)
+
+![image](./Screenshot2.png)
+
 ## Built With
 
 - Ruby v2.7.0
 - Ruby on Rails v6
 
-## Tested With
+## Tested and Analyzed With
 
 - Rubocop
 - Rspec
+- Stylintrc
 
 ## Prerequisites
 
@@ -20,7 +25,7 @@
 
 ## Live Demo
 
-Working on it
+[Stay in touch](https://mighty-dawn-48886.herokuapp.com/users/sign_in)
 
 ### Setup
 
@@ -67,7 +72,24 @@ Open `http://localhost:3000/` in your browser.
 
 ### Deployment
 
-TBA
+-- In order to deploy this app to Heroku follow the steps below.
+
+- Install the Heroku CLI.
+
+- After that type the command to create the app and add the heroku repository to your project.
+
+- `heroku create`
+
+- Then `git push -u heroku yourbranch:master` to deploy the app.
+
+- Replace yourbranch with the name of your branch.
+
+- Finally run the command to create your database and tables on Heroku's server.
+
+- `heroku run rails db:migrate`
+
+- Enjoy the App functionalities.
+
 
 ## Authors
 
@@ -97,11 +119,4 @@ Feel free to check the [issues page](issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-TBA
-
-## 📝 License
-
-TBA
 
